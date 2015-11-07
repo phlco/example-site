@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h1>
+    <span onclick="changeToGoodbye(this)">Hello </span>
+    <span id="username"></span>!
+  </h1>
+
+  <input type="text" onKeypress="changeName(this)">
+
+  <script>
+    function changeName(element){
+      if (event.keyCode == 13) {
+        username.textContent = element.value;
+      }
+    }
+
+    function changeToGoodbye(element){
+      element.textContent = "Goodbye"
+    }
+  </script>
+</body>
+</html>
